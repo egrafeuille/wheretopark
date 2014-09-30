@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  latitude: 9.99
+  longitude: 9.99
+  hour_fee: 9.99
+  total_spots: 9.99
+  free_spots: 9.99
+
+two:
+  name: MyString
+  address: MyString
+  latitude: 9.99
+  longitude: 9.99
+  hour_fee: 9.99
+  total_spots: 9.99
+  free_spots: 9.99

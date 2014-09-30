@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @parking.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @parking.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @parking.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @parking.longitude %>
+</p>
+
+<p>
+  <b>Hour fee:</b>
+  <%= @parking.hour_fee %>
+</p>
+
+<p>
+  <b>Total spots:</b>
+  <%= @parking.total_spots %>
+</p>
+
+<p>
+  <b>Free spots:</b>
+  <%= @parking.free_spots %>
+</p>
+
+
+<%= link_to 'Edit', edit_parking_path(@parking) %> |
+<%= link_to 'Back', parkings_path %>
