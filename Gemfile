@@ -39,3 +39,6 @@ gem 'jquery-rails'
 
 # Google Maps for Rails
 gem 'gmaps4rails'
+gem 'geocoder'
+#gem 'geokit-rails3'
+
