@@ -1,0 +1,18 @@
+<div class="content">
+	<h3><%= link_to truncate(parking.name, :length => 40), parking %></h3>
+	<table>
+		<tr>
+			<td>Hora</td>
+			<td id="r"><%= number_to_currency(parking.hour_fee) %></td>
+		</tr>
+		<tr>
+			<td>Estadia</td>
+			<td id="r">$ 150.00</td>
+		</tr>
+		<tr>
+			<td>Mensual</td>
+			<td id="r">$ 1500.00</td>
+		</tr>
+	</table>
+	<%= link_to 'Mas detalles...', parking %>
+</div>

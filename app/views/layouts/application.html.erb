@@ -1,14 +1,63 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Wheretopark</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+    <title>Where to Park | Your way to park</title>
+    
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+    
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" />
+	<!--   
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	//-->    
 </head>
 <body>
-
-<%= yield %>
-
+    <div id="header">
+        <a href="#"><img id="logo" src="images/wtp_logo.png" alt="" /></a> 
+        <div id="menu">
+            <ul>
+                <li><%= link_to 'Home', map_path %></li>
+        		<li>|<%= link_to 'Parkings', parkings_path %></li>
+         	   	<li>|<%= link_to 'Users', map_path %></li>
+                <li>|<a href="#">Help</a></li>
+                <li>|<a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <h1><a href="#">Where to Park</a></h1>
+        <p id="subtitle">Your way to park</p>
+        <form id="search" method="get" action="#">
+            <input type="text" class="text" />
+            <input type="submit" class="submit" value="Search" />
+        </form>
+    </div><!-- header -->
+    <div id="main"><div id="main2">	
+            <div id="sidebar">
+                <h2>Destinos Populares</h2>
+                <ul>
+                    <li><a href="#">Puerto Madero</a></li>
+                    <li><a href="#">Plaza de Mayo</a></li>
+                    <li><a href="#">Congreso</a></li>
+                    <li><a href="#">Belgrano</a></li>
+                </ul>
+                <h2>Porque Where to Park?</h2>
+                <div class="box">
+                    <p>Encuentre y reserve el lugar perfecto.</p> 
+                    <p>Descuentos especiales.</p> 
+                    <p>Programas de recompensas y mucho mas...</p>
+                </div>
+            </div><!-- sidebar -->    	              
+            <div id="content">		
+            	<%= yield %>	
+            </div><!-- content -->                    
+            <div class="clearing">&nbsp;</div>   
+    </div></div><!-- main --><!-- main2 -->
+    <div id="footer">
+        <p>Copyright &copy; 2014, designed by <a href="http://www.webtemplateocean.com/">WebTemplateOcean.com</a></p>
+    </div>
 </body>
 </html>
