@@ -9,9 +9,10 @@ class MapController < ApplicationController
       marker.infowindow render_to_string(:partial => "infowindow", :locals => { :parking => parking})
     end
   end
+  
   def build_icon(hour_fee)
     icons = {"cheap"=> "images/wtp_marker_bst.png",
-            "middle"=> "images/wtp_marker_ost.png",
+            "middle"=> "images/wtp_m30_ost.png",
             "expensive"=> "images/wtp_marker_pst.png"
             }
     case hour_fee
@@ -28,4 +29,9 @@ class MapController < ApplicationController
             }
   end
   
+  def overlap_price_icon(hour_fee)
+  # convert wtp_marker_ost.png -gravity center 
+  #       -stroke "#000C" -strokewidth 2 -annotate +0-8 "$ (hour_fee)" 
+  #       -stroke none -fill white -annotate +0-8 "$ (hour_fee)" wtp_m(hour_fee)_ost.png
+  end
 end
